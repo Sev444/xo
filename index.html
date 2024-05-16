@@ -46,7 +46,7 @@
     function App() { // сам компонент app XO     
         // значение // функция, с помощью которой ты можешь менять значение                     // реакт ререндер ( после изменения состояния снова вызывает функцию ), чтобы узнать, что компонент должен отрисовать.
       const [cells, setCells] = React.useState([null, null, null, null, null, null, null, null, null]); // массив, где хранятся крестики нолики
-      const [currentStep, setCurrentStep] = React.useState(SYMBOL_O)//состояние и установка состояния, принимает аргументом начальное состояние
+      const [currentStep, setCurrentStep] = React.useState(SYMBOL_X)//состояние и установка состояния, принимает аргументом начальное состояние
       const [winnerSequence, setWinnerSequence] = React.useState(); //wS - хранятся индексы побеждающей последовательности
       const [isTie, setIsTie] = React.useState(false); // состояние ничьей
 
@@ -115,7 +115,7 @@
       // arrow function
       const clearCells = () => {
         setCells([null, null, null, null, null, null, null, null, null]);
-        setCurrentStep(SYMBOL_O);
+        setCurrentStep(SYMBOL_X);
         setWinnerSequence(null);
         setIsTie(false); // Добавлен сброс состояния ничьей
       }
